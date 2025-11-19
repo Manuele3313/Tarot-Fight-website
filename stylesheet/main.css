@@ -5,11 +5,32 @@
     box-sizing: border-box;
 }
 
+/* Colors */
+:root{
+    --color-highlight: #b33951;
+    --color-text: #333;
+    --color-active: #395bb9;
+    --color-passive: #9e1495;
+    --color-instant: #b33951;
+    --color-background: #f5f5f5;
+    --color-background-secondary: #f8f9fa;
+}
+
+
+/* Google Icons */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
+    color: var(--color-text);
+    background-color: var(--color-background);
     padding-bottom: 80px; /* Space for mobile bottom nav */
 }
 
@@ -23,13 +44,67 @@ body {
     margin-top: 2rem;
 }
 
+
+.home{
+    padding-bottom: 200px;
+    margin-top: 4rem; /* margin for the navbar */
+}
+
+.site-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+h1{
+    font-size: 2.5rem;
+    color: var(--color-highlight);
+}
+
+h2{
+    font-size: 2.5rem;
+    color: var(--color-highlight);
+}
+
+h3{
+    font-size: 1.75rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+p{
+    font-size: 1em;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.card-instant{
+    padding: 2px;
+    color: var(--color-background);
+    background-color: var(--color-instant);
+}
+
+.card-passive{
+    padding: 2px;
+    color: var(--color-background);
+    background-color: var(--color-passive);
+}
+
+.card-active{
+    padding: 2px;
+    color: var(--color-background);
+    background-color: var(--color-active);
+}
+
 /* ===== DESKTOP HEADER ===== */
 .main-header {
     position: fixed;
     top: 0;
     width: 100%;
     height: 4rem;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--color-background);
     backdrop-filter: blur(10px);
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -44,28 +119,24 @@ body {
     margin: 0 auto;
 }
 
-/* margin for the navbar */
-#home{
-    margin-top: 4rem;
-}
 
 .nav-logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: var(--color-text);
     text-decoration: none;
 }
 
 .nav-links a {
     margin-left: 2rem;
     text-decoration: none;
-    color: #333;
+    color: var(--color-text);
     font-weight: 500;
     transition: color 0.1s ease;
 }
 
 .nav-links a:hover {
-    color: #667eea;
+    color: var(--color-highlight);
 }
 
 /* ===== MOBILE BOTTOM NAVIGATION ===== */
@@ -74,12 +145,11 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(20px);
+    background: var(--color-background);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     display: none; /* Hidden by default on desktop */
     z-index: 1000;
-    padding: 0.5rem 0;
+    padding-top: 0.5rem;
 }
 
 .mobile-bottom-nav .nav-item {
@@ -89,16 +159,23 @@ body {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #666;
+    color: var(--color-text);
     padding: 0.5rem;
+    padding-bottom: 0px;
     transition: all 0.1s ease;
     min-height: 60px;
 }
 
 .mobile-bottom-nav .nav-item:hover,
 .mobile-bottom-nav .nav-item.active {
-    color: #667eea;
+    color: var(--color-highlight);
     transform: translateY(-2px);
+    
+}
+
+.mobile-bottom-nav .nav-item.active {
+    border-bottom: var(--color-highlight) solid 3px;
+    margin-bottom: -2px;
 }
 
 .nav-icon {
@@ -113,60 +190,11 @@ body {
 }
 
 
-.site-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
 
 .tagline {
     font-size: 1.2rem;
     margin-bottom: 3rem;
     opacity: 0.9;
-}
-
-/* ===== NAVIGATION CARDS ===== */
-.nav-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.nav-card {
-    display: block;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    padding: 1.5rem 2rem;
-    text-decoration: none;
-    color: white;
-    transition: all 0.1s ease;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.nav-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.card-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.card-content p {
-    opacity: 0.9;
-    font-size: 0.85rem;
-    margin: 0;
 }
 
 /* ===== CONTENT SECTIONS ===== */
@@ -178,13 +206,55 @@ body {
 }
 
 .content-section:nth-child(even) {
-    background: #f8f9fa;
+    background: var(--color-background-secondary);
 }
 
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem; /* Account for fixed header */
+}
+
+/* ===== TOGGLE TEXT BUTTON ===== */
+.toggle-text-button {
+  /* Base styles */
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-background);
+  cursor: pointer;
+  background: var(--color-highlight);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pressing animation (active state) */
+.toggle-text-button:active {
+  transform: scale(0.90);
+}
+
+/* Optional: Ripple animation on click */
+.toggle-text-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.6s ease-out, opacity 0.4s ease-out;
+}
+
+.toggle-text-button:active::after {
+  transform: scale(11, 1);
+  opacity: 0.4;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -218,13 +288,9 @@ html {
         padding-bottom: 150px;
     }
     
-    #home {
+    .home {
         margin-top: 1rem;
         min-height: calc(100vh - 70px);
-    }
-    
-    .site-title {
-        font-size: 2rem;
     }
     
     .tagline {
