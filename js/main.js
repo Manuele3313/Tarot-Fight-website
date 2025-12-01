@@ -4,9 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
-            const header = document.querySelector('#home'); 
 
-            
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
@@ -17,6 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Select theme based on user preference
+    if(window.matchMedia("(prefers-color-scheme: dark)").matches){
+        document.body.classList.add('dark-mode');
+        document.body.classList.remove('light-mode');
+        changeBtnIcon();
+    } else{
+        document.body.classList.add('light-mode');
+        document.body.classList.remove('dark-mode');
+        changeBtnIcon();
+    }
 
     // Active navigation highlighting
     const sections = document.querySelectorAll('.content-section');
@@ -91,8 +100,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Functionality for the theme-togglebutton
 document.getElementById('theme-button').addEventListener('click', function(){
-    this.textContent = (this.textContent == "Light Mode")? "Dark Mode" : "Light Mode"
     toggleTheme();
+    changeBtnIcon();
 })
 
 
@@ -104,5 +113,18 @@ function toggleTheme(){
     } else{
         body.classList.toggle('dark-mode');
         body.classList.toggle('light-mode');
+    }
+}
+//Toggles the right theme icon 
+function changeBtnIcon(){
+    const lightIcon = document.getElementById("theme-button-icon-light");
+    const darkIcon = document.getElementById("theme-button-icon-dark");
+    const body = document.querySelector('body');
+    if(body.classList.contains('light-mode')){
+        lightIcon.style.display = 'block';
+        darkIcon.style.display = 'none';
+    } else if(body.classList.contains('dark-mode')){
+        lightIcon.style.display = 'none';
+        darkIcon.style.display = 'block';
     }
 }

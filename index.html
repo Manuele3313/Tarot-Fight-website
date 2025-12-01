@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <!-- Google Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cards_star,domino_mask,error,fact_check,person_play,sword_rose" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cards_star,dark_mode,domino_mask,error,fact_check,light_mode,person_play,sword_rose" />
 </head>
-<body class="light-mode">
+<body>
 
     <header class="main-header">
         <nav class="main-nav">
@@ -25,7 +25,14 @@
                 <a href="#section4">Effetti Arcana Minori</a>
                 <a href="#section5">Ambiguità</a>
             </div>
+           
         </nav>
+
+            <button class="toggle-theme-button" id="theme-button">
+                <span class="material-symbols-outlined" id="theme-button-icon-light">light_mode</span>
+                <span class="material-symbols-outlined" id="theme-button-icon-dark" style="display: none;">dark_mode</span>
+            </button>
+
     </header>
 
     <section class="home content-section" id="home">
@@ -40,9 +47,6 @@
             </p>
         </div>
 
-        <div class="button-container">
-                <button class="toggle-theme-button" id="theme-button">Light Mode</button>
-        </div>
     </section>
 
     <section id="section1" class="content-section">
@@ -52,7 +56,7 @@
                Si divide il mazzo in due: 22 Arcana Maggiori e 54 Arcana Minori <br>
             </p>
             <p>
-               Dopo aver mischiato il mazzo, ad ogni giocatore vengono date 6 Arcana Minori e 3 Arcana Maggiori<br>
+               Dopo aver mischiato il mazzo, ad ogni giocatore vengono dati 6 Arcana Minori e 3 Arcana Maggiori<br>
             </p>
             <p>
                Le Aree di gioco sono: Il mazzo degli Arcana Maggiori, il mazzo degli Arcana Minori, 
@@ -79,6 +83,8 @@
             <p>
                 Ogni giocatore posiziona un <strong>Arcana Maggiore</strong> e uno o più 
                 <strong>Arcana Minori</strong> dalla sua mano <br>
+                Gli Arcana Minori schierati <strong>devono avere lo stesso seme</strong> e solo una figura
+                tra quelle giocate può attivare il suo effetto.
             </p>
 
             <p>
@@ -119,9 +125,11 @@
                 Gli effetti <strong class="card-active">attivabili</strong> degli Arcana Maggiori, si possono attivare
                 quando quell'Arcana Maggiore è posizionato tra i punti vittoria di un giocatore. <br>
                 Si possono attivare in qualsiasi momento della <strong>battaglia</strong>, ma non nella fase di
-                rifornimento. <br> Quando viene attivato un effetto di questo tipo, si <strong>sposta nella
-                pila degli scarti</strong> la carta attivata, e il punto vittoria viene rimpiazzato da un Arcana
-                Minore dalla mano del giocatore che attiva l'effetto. 
+                rifornimento. <br> Quando viene attivato un effetto di questo tipo, si <strong>mischia
+                nel mazzo</strong> degli Arcana Maggiori la carta attivata, e il punto vittoria viene <strong>sostituito
+                </strong> da un Arcana Minore dalla mano del giocatore che attiva l'effetto. <br>
+                In questo modo, il giocatore mantiene lo stesso numero di punti vittoria, ma non può più attivare 
+                l'attivabile.
             </p>
             <h3>Rifornimento</h3>
             <p>
@@ -221,7 +229,7 @@
                     effetti <br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-passive">12 - L'IMPICCATO</strong>: Ad ogni turno puoi scartare uno o più
+                    <strong class="card-passive">12 - L'IMPICCATO</strong>: Puoi scartare uno o più
                     Arcana Maggiori per ottenere <strong>+8 punti</strong><br>
                 </p>
                 <p class="card-description">
@@ -234,18 +242,18 @@
                     dalla pila degli scarti: <strong>sia Arcana Maggiori che Arcana Minori</strong><br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-passive">15 - IL DIAVOLO</strong>: I tuoi assi valgono <strong>+10</strong><br>
+                    <strong class="card-passive">15 - IL DIAVOLO</strong>: I tuoi assi valgono <strong>+10</strong> punti<br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-active">16 - LA TORRE</strong>: Questo turno viene annullato: <strong>non c'è 
+                    <strong class="card-active">16 - LA TORRE</strong>: In questo turno <strong>non c'è 
                     nessun vincitore.</strong> Tutte le carte giocate vengono scartate.<br>
                 </p>
                 <p class="card-description">
                     <strong class="card-passive">17 - LA STELLA</strong>: I Denari fanno pescare 3 Arcana Minori<br>
                 </p>
                 <p class="card-description">
-                    <strong class="card-active">18 - LA LUNA</strong>: Quando giochi il seme Spade, <strong>sposta</strong> 
-                    un punto vittoria di un avversario nella pila degli scarti<br>
+                    <strong class="card-active">18 - LA LUNA</strong>: Se hai giocato il seme Spade, metti
+                    un punto vittoria di un avversario <strong>nella pila degli scarti</strong><br>
                 </p>
                 <p class="card-description">
                     <strong class="card-passive">19 - IL SOLE</strong>: Ogni tuo Arcana Maggiore giocato ha <strong>+2</strong> punti<br>
@@ -256,7 +264,7 @@
                 <p class="card-description">
                     <strong class="card-passive">21 - IL MONDO</strong>: Se possiedi <strong>3 punti vittoria</strong> (compresa questa carta),
                     nella fase di <strong>rifornimento</strong> peschi <strong>1 Arcana Maggiore</strong> e <strong>2 Arcana Minori</strong>
-                     aggiuntivi <br>
+                    aggiuntivi <br>
                 </p>
             </div>
 
@@ -382,7 +390,7 @@
 
             <p class="card-description">
                 <strong class="card-instant">Cavaliere:</strong>
-                Un avversario scarta <strong>1 Arcana Maggiore</strong> dalla propria mano, ne pesca 
+                Un avversario scarta <strong>1 Arcana Maggiore</strong> a caso dalla propria mano, ne pesca 
                 immediatamente uno dal mazzo
             </p>
 
@@ -499,6 +507,7 @@
             <span class="nav-text">Ambiguità</span>
         </a>
     </nav>
+
     <script src="js/main.js"></script>
 </body>
 </html>
