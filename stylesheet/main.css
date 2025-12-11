@@ -55,6 +55,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    flex-direction: row;
 }
 
 .site-title > h1 {
@@ -62,7 +64,6 @@ body {
     margin-bottom: 1rem;
     font-weight: 700;
     display: flex;
-    align-self: center;
 }
 
 h1{
@@ -151,24 +152,29 @@ li{
 	padding: 0px;
 	margin-bottom: 1rem;
     margin-top: 1rem;
+    line-height: 1.45;
 }
 
 .card-instant{
-    padding: 2px 3px;
+    padding: 1px 3px 1px 3px; 
+    margin-right: 2px;
+    margin-left: 2px;
     color: var(--color-background);
     background-color: var(--color-instant);
 }
 
 .card-passive{
-    padding: 2px 3px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding: 1px 3px 1px 3px; 
+    margin-right: 2px;
+    margin-left: 2px;
     color: var(--color-background);
     background-color: var(--color-passive);
 }
 
 .card-active{
-    padding: 2px 3px;
+    padding: 1px 3px 1px 3px; 
+    margin-right: 2px;
+    margin-left: 2px;
     color: var(--color-text);
     background-color: var(--color-active);
 }
