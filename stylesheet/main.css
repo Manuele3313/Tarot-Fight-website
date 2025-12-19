@@ -93,12 +93,14 @@ p{
 }
 
 ul{
-    list-style-type: none;
+    text-decoration: none;
+    padding-left: 20px;
 }
 
 li{
     padding: 0.5rem 0rem 0.5rem 1rem;
     font-size: 1.1em;
+    text-indent: -1%;
 }
 
 .button-container{
