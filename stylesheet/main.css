@@ -158,37 +158,112 @@ li{
   opacity: 0.4;
 }
 
-/* Card Effects List */
-.card-description {
-	/* border: 1px solid color-mix(in oklab, var(--color-text) 43%, var(--color-background) 50%); */
-	padding: 0px;
-	margin-bottom: 1rem;
-    margin-top: 1rem;
-    line-height: 1.45;
-}
-
 .card-instant{
-    padding: 1px 3px 1px 3px; 
+    padding: 2px 4px 2px 4px; 
     margin-right: 2px;
     margin-left: 2px;
     color: var(--color-background);
-    background-color: var(--color-instant);
+    background: var(--color-instant);
+    border-radius: 4px;
 }
 
 .card-passive{
-    padding: 1px 3px 1px 3px; 
+    padding: 2px 4px 2px 4px;  
     margin-right: 2px;
     margin-left: 2px;
     color: var(--color-background);
-    background-color: var(--color-passive);
+    background: var(--color-passive);
+    border-radius: 4px;
 }
 
 .card-active{
-    padding: 1px 3px 1px 3px; 
+    padding: 2px 4px 2px 4px; 
     margin-right: 2px;
     margin-left: 2px;
     color: var(--color-text);
-    background-color: var(--color-active);
+    background: var(--color-active);
+    border-radius: 4px;
+}
+
+/* Card Effects List */
+
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.card-list li{
+    text-indent: 0%;
+}
+
+.card-item {
+    background: var(--color-background);
+    padding: 1rem 1rem;
+    transition: 0.2s ease;
+}
+
+.card-item:hover {
+    transform: translateY(-4px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.8rem;
+    margin-bottom: 0.6rem;
+}
+
+.card-number {
+    font-weight: 800;
+    font-size: 1.2rem;
+    background: var(--color-text);
+    color: var(--color-background);
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+}
+
+.card-name {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.6px;
+}
+
+.card-tag--instant {
+    background: var(--color-highlight);
+    color: var(--color-background);  
+}
+
+.card-tag--active {
+    background: var(--color-active);
+    color: var(--color-text)
+}
+
+.card-tag--passive {
+    background: var(--color-passive);  
+    color: var(--color-background);
+}
+
+.card-text {
+    line-height: 1.4;
+    font-size: 1rem;
+}
+
+.card-text strong {
+    font-weight: 700;
 }
 
 .container > p{
@@ -196,7 +271,7 @@ li{
     margin-bottom: 1rem;
 }
 
-/* ===== DESKTOP HEADER ===== */
+/* DESKTOP HEADER */
 .main-header {
     position: fixed;
     top: 0;
@@ -442,6 +517,12 @@ html {
     .content-section:nth-child(7){
         height: fit-content;
     }
+
+
+    .card-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
 @media (min-width: 1006px) {
@@ -451,5 +532,9 @@ html {
     }
     .mobile-button{
         display: none;
+    }
+
+    .card-list {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

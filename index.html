@@ -6,11 +6,11 @@
     <title>Arcana Showdown</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-    <link rel="manifest" href="/images/site.webmanifest" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -263,7 +263,7 @@
             <h2>Arcana Maggiori</h2>
 
             <p>
-                Gli Arcana Maggiori si dividono in 3 categorie:
+                Gli effetti degli Arcana Maggiori si dividono in 3 categorie:
                 <h4><strong class="card-instant">Istantanei</strong></h4>
                 <p>
                     Il tipo più diretto. <br>
@@ -293,95 +293,258 @@
             <!-- <div class="button-container">
                 <button class="toggle-text-button" id="text-button">Cambia Regole</button>
             </div> -->
-            <h3>Gli effetti delle carte</h4>
-            <div id="text-1">
-                <p class="card-description">
-                    <strong class="card-instant">0 - IL MATTO</strong>: Sei il <strong>vincitore di questo turno</strong>
-                </p>
-                <p class="card-description">
-                    <strong class="card-instant">1 - IL MAGO</strong>: Rivela <strong>3 carte</strong> dal mazzo degli Arcana Minori e posizionale 
-                    nel tuo campo
-                </p>
-                <p class="card-description">
-                    <strong class="card-instant">2 - LA PAPESSA</strong>: Un avversario ti mostra tutti gli Arcana Maggiori nella sua mano.
-                    Puoi <strong>aggiungerne 1</strong> alla tua mano
-                </p>
-                <p class="card-description">
-                    <strong class="card-instant">3 - L'IMPERATRICE</strong>: Pesca <strong>3</strong> Arcana Maggiori 
-                </p>
-                <p class="card-description">
-                    <strong class="card-instant">4 - L'IMPERATORE</strong>: Il punteggio <strong>di tutti i giocatori</strong>
-                    è calcolato guardando <strong>solamente l'ultima cifra</strong> del punteggio effettivo: 17 diventa 7, 8 rimane 8, 10 diventa 0
-                </p>
-                <p class="card-description">
-                    <strong class="card-instant">5 - L'IEROFANTE</strong>: <strong>Scegli</strong> un seme nel campo dell'avversario:
-                    tutti gli Arcana Minori di quel seme <strong>vanno nella tua mano</strong>
-                </p>
-                <p class="card-description">
-                    <strong class="card-instant">6 - GLI AMANTI</strong>: <strong>Scambia</strong> questa carta con un Arcana Maggiore
-                    nei punti vittoria <strong>di un avversario</strong>
-                </p>
-                <p class="card-description">
-                    <strong class="card-instant">7 - IL CARRO</strong>: Puoi scegliere un <strong>seme aggiuntivo</strong> da giocare
-                </p>
-                <p class="card-description">
-                    <strong class="card-active">8 - FORZA</strong>: <strong>Raddoppia</strong> il tuo punteggio
-                </p>
-                <p class="card-description">
-                    <strong class="card-passive">9 - L'EREMITA</strong>: L'effetto dei Bastoni diventa: "Ottieni <strong>2</strong> 
-                    punti per ogni Arcana Minore giocato dal <strong>giocatore</strong> con più Arcana Minori giocati"
-                </p>
-                <p class="card-description">
-                    <strong class="card-instant">10 - RUOTA DELLA FORTUNA</strong>: Rivela la prima carta
-                    dal mazzo degli Arcana Minori, se il suo seme è <strong>uguale</strong> al seme giocato
-                    con questa carta scartala e ottieni <strong>2 punti vittoria</strong> pescandoli dal mazzo degli Arcana Minori. 
-                </p>
-                <p class="card-description">
-                    <strong class="card-instant">11 - GIUSTIZIA</strong>: Se possiedi <strong>meno punti vittoria</strong> di un avversario,
-                    allora sei il <strong>vincitore di questo turno</strong>
-                </p>
-                <p class="card-description">
-                    <strong class="card-passive">12 - L'IMPICCATO</strong>: Scarta
-                    un Arcana Maggiore dalla tua mano per ottenere <strong>4 punti</strong> oppure un Arcana Minore dal tuo
-                    campo per ottenere <strong>2 punti</strong>. <br>
-                    Questo effetto è <strong>cumulabile</strong>. <br> Se hai scartato un Arcana Maggiore con questo effetto, <strong>
-                    non puoi pescare Arcana Maggiori durante la fase di rifornimento</strong>
-                </p>
-                <p class="card-description">
-                    <strong class="card-active">13 - LA MORTE</strong>: Un avversario scarta tutti gli Arcana Maggiori e Minori
-                    dalla sua mano e perde <strong>1 punto vittoria</strong>
-                </p>
-                <p class="card-description">
-                    <strong class="card-passive">14 - TEMPERANZA</strong>: L'effetto delle <strong>Coppe</strong> diventa: "Aggiungi dalla pila degli scarti
-                    alla tua mano <strong>1 Arcana Maggiore</strong> oppure <strong>2 Arcana Minori</strong>"
-                </p>
-                <p class="card-description">
-                    <strong class="card-passive">15 - IL DIAVOLO</strong>: Gli assi valgono <strong>10</strong> punti
-                </p>
-                <p class="card-description">
-                    <strong class="card-active">16 - LA TORRE</strong>: Tutte le carte nel campo di <strong>ogni giocatore</strong>
-                    vengono scartate. In questo turno <strong>non c'è nessun vincitore</strong> 
-                </p>
-                <p class="card-description">
-                    <strong class="card-active">17 - LA STELLA</strong>: Se hai giocato il seme Denari, posiziona <strong>tutti</strong> gli Arcana 
-                    Minori nella tua mano sul tuo campo
-                </p>
-                <p class="card-description">
-                    <strong class="card-active">18 - LA LUNA</strong>: Se hai giocato il seme Spade, un avversario <strong>perde</strong> un punto vittoria
-                </p>
-                <p class="card-description">
-                    <strong class="card-passive">19 - IL SOLE</strong>: Ottieni <strong>2 punti</strong> per <strong>ogni seme</strong> posizionato
-                    sul tuo campo. Il seme giocato non conta
-                </p>
-                <p class="card-description">
-                    <strong class="card-active">20 - GIUDIZIO</strong>: Scambia l'Arcana Maggiore giocato con uno nella pila degli scarti 
-                    degli Arcana Maggiori
-                </p>
-                <p class="card-description">
-                    <strong class="card-active">21 - IL MONDO</strong>: Se <strong>3 Semi diversi</strong> si trovano nel tuo campo, ottieni
-                    <strong>10 punti</strong>
-                </p>
-            </div>
+            <h3>Gli effetti delle carte</h3>
+            <ul class="card-list">
+
+                <li class="card-item" data-type="instant">
+                    <header class="card-header">
+                        <span class="card-number">0</span>
+                        <span class="card-name">Il Matto</span>
+                        <span class="card-tag card-tag--instant">Istantaneo</span>
+                    </header>
+                    <p class="card-text"><strong>Vinci</strong> questo turno.</p>
+                </li>
+
+                <li class="card-item" data-type="instant">
+                    <header class="card-header">
+                        <span class="card-number">1</span>
+                        <span class="card-name">Il Mago</span>
+                        <span class="card-tag card-tag--instant">Istantaneo</span>
+                    </header>
+                    <p class="card-text">
+                        Rivela <strong>4 carte</strong> dal mazzo degli Arcana Minori e posizionale nel tuo campo.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="instant">
+                    <header class="card-header">
+                        <span class="card-number">2</span>
+                        <span class="card-name">La Papessa</span>
+                        <span class="card-tag card-tag--instant">Istantaneo</span>
+                    </header>
+                    <p class="card-text">
+                        Un avversario ti mostra tutti gli Arcana Maggiori nella sua mano.  
+                        Puoi <strong>aggiungerne 1</strong> alla tua mano.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="instant">
+                    <header class="card-header">
+                        <span class="card-number">3</span>
+                        <span class="card-name">L'Imperatrice</span>
+                        <span class="card-tag card-tag--instant">Istantaneo</span>
+                    </header>
+                    <p class="card-text">Pesca <strong>3</strong> Arcana Maggiori.</p>
+                </li>
+
+                <li class="card-item" data-type="instant">
+                    <header class="card-header">
+                        <span class="card-number">4</span>
+                        <span class="card-name">L'Imperatore</span>
+                        <span class="card-tag card-tag--instant">Istantaneo</span>
+                    </header>
+                    <p class="card-text">
+                        Il punteggio <strong>di tutti i giocatori</strong> è calcolato guardando solo l’ultima cifra del punteggio effettivo.
+                        17 diventa 7, 10 diventa 0, 8 rimane 8.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="instant">
+                    <header class="card-header">
+                        <span class="card-number">5</span>
+                        <span class="card-name">L'Ierofante</span>
+                        <span class="card-tag card-tag--instant">Istantaneo</span>
+                    </header>
+                    <p class="card-text">
+                        <strong>Scegli</strong> un seme nel campo dell’avversario: posiziona tutti gli Arcana Minori di quel seme <strong>nel tuo campo</strong>.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="instant">
+                    <header class="card-header">
+                        <span class="card-number">6</span>
+                        <span class="card-name">Gli Amanti</span>
+                        <span class="card-tag card-tag--instant">Istantaneo</span>
+                    </header>
+                    <p class="card-text">
+                        <strong>Scambia</strong> questa carta con un Arcana Maggiore nei punti vittoria <strong>di un avversario</strong>.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="instant">
+                    <header class="card-header">
+                        <span class="card-number">7</span>
+                        <span class="card-name">Il Carro</span>
+                        <span class="card-tag card-tag--instant">Istantaneo</span>
+                    </header>
+                    <p class="card-text">Puoi scegliere un <strong>seme aggiuntivo</strong> da giocare. <br>
+                    Si attivano gli effetti di <strong>entrambi i semi</strong>.</p>
+                </li>
+
+                <li class="card-item" data-type="instant active">
+                    <header class="card-header">
+                        <span class="card-number">8</span>
+                        <span class="card-name">Forza</span>
+                        <span class="card-tag card-tag--instant">Istantaneo</span>
+                        <span class="card-tag card-tag--active">Attivabile</span>
+                    </header>
+                    <p class="card-text">
+                        <strong>Istantaneo:</strong> Dimezza i punti degli Arcana Minori degli avversari.<br>
+                        <strong>Attivabile:</strong> Raddoppia il tuo punteggio.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="instant passive">
+                    <header class="card-header">
+                        <span class="card-number">9</span>
+                        <span class="card-name">L'Eremita</span>
+                        <span class="card-tag card-tag--instant">Istantaneo</span>
+                        <span class="card-tag card-tag--passive">Passivo</span>
+                    </header>
+                    <p class="card-text">
+                        <strong>Istantaneo:</strong> L’effetto del seme giocato si attiva <strong>2 volte</strong><br>
+                        <strong>Passivo:</strong> L’effetto dei Bastoni diventa “Ottieni <strong>2</strong> punti per ogni Arcana Minore giocato dal giocatore con più Arcana Minori giocati”.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="instant">
+                    <header class="card-header">
+                        <span class="card-number">10</span>
+                        <span class="card-name">Ruota della Fortuna</span>
+                        <span class="card-tag card-tag--instant">Istantaneo</span>
+                    </header>
+                    <p class="card-text">
+                        Rivela la prima carta dal mazzo degli Arcana Minori.  
+                        Se il suo seme è <strong>uguale</strong> al seme giocato, scartala e posiziona <strong>2 Arcana Minori nei Punti Vittoria</strong> dal tuo campo.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="instant">
+                    <header class="card-header">
+                        <span class="card-number">11</span>
+                        <span class="card-name">Giustizia</span>
+                        <span class="card-tag card-tag--instant">Istantaneo</span>
+                    </header>
+                    <p class="card-text">
+                        Se possiedi <strong>meno punti vittoria</strong> di un avversario, <strong>vinci</strong> questo turno.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="passive">
+                    <header class="card-header">
+                        <span class="card-number">12</span>
+                        <span class="card-name">L'Impiccato</span>
+                        <span class="card-tag card-tag--passive">Passivo</span>
+                    </header>
+                    <p class="card-text">
+                        Scarta un Arcana Maggiore per ottenere <strong>4 punti</strong> oppure un Arcana Minore per ottenerne <strong>2</strong>.  
+                        Effetto <strong>cumulabile</strong>.  
+                        Se hai scartato Arcana Maggiori, <strong>non puoi pescare Arcana Maggiori</strong> durante la fase di rifornimento.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="active">
+                    <header class="card-header">
+                        <span class="card-number">13</span>
+                        <span class="card-name">La Morte</span>
+                        <span class="card-tag card-tag--active">Attivabile</span>
+                    </header>
+                    <p class="card-text">
+                        Un avversario scarta tutti gli Arcana Maggiori e Minori dalla sua mano e perde <strong>1 punto vittoria</strong>.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="passive">
+                    <header class="card-header">
+                        <span class="card-number">14</span>
+                        <span class="card-name">Temperanza</span>
+                        <span class="card-tag card-tag--passive">Passivo</span>
+                    </header>
+                    <p class="card-text">
+                        L’effetto delle <strong>Coppe</strong> diventa: “Aggiungi dalla pila degli scarti alla tua mano <strong>1 Arcana Maggiore</strong> oppure <strong>2 Arcana Minori</strong>”.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="passive">
+                    <header class="card-header">
+                        <span class="card-number">15</span>
+                        <span class="card-name">Il Diavolo</span>
+                        <span class="card-tag card-tag--passive">Passivo</span>
+                    </header>
+                    <p class="card-text">Gli Assi valgono <strong>10</strong> punti.</p>
+                </li>
+
+                <li class="card-item" data-type="active">
+                    <header class="card-header">
+                        <span class="card-number">16</span>
+                        <span class="card-name">La Torre</span>
+                        <span class="card-tag card-tag--active">Attivabile</span>
+                    </header>
+                    <p class="card-text">
+                        Tutte le carte nel campo di <strong>ogni giocatore</strong> vengono scartate.  
+                        Si passa <strong>immediatamente</strong> alla fase di rifornimento.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="active">
+                    <header class="card-header">
+                        <span class="card-number">17</span>
+                        <span class="card-name">La Stella</span>
+                        <span class="card-tag card-tag--active">Attivabile</span>
+                    </header>
+                    <p class="card-text">
+                        Se hai giocato il seme Denari, posiziona <strong>tutti</strong> gli Arcana Minori nella tua mano sul tuo campo.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="active">
+                    <header class="card-header">
+                        <span class="card-number">18</span>
+                        <span class="card-name">La Luna</span>
+                        <span class="card-tag card-tag--active">Attivabile</span>
+                    </header>
+                    <p class="card-text">
+                        Se hai giocato il seme Spade, un avversario <strong>perde</strong> un punto vittoria.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="passive">
+                    <header class="card-header">
+                        <span class="card-number">19</span>
+                        <span class="card-name">Il Sole</span>
+                        <span class="card-tag card-tag--passive">Passivo</span>
+                    </header>
+                    <p class="card-text">
+                        Ottieni <strong>2 punti</strong> per <strong>ogni seme</strong> posizionato sul tuo campo.  
+                        Il seme giocato non conta.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="active">
+                    <header class="card-header">
+                        <span class="card-number">20</span>
+                        <span class="card-name">Giudizio</span>
+                        <span class="card-tag card-tag--active">Attivabile</span>
+                    </header>
+                    <p class="card-text">
+                        Scambia l’Arcana Maggiore giocato con uno nella pila degli scarti degli Arcana Maggiori.
+                    </p>
+                </li>
+
+                <li class="card-item" data-type="active">
+                    <header class="card-header">
+                        <span class="card-number">21</span>
+                        <span class="card-name">Il Mondo</span>
+                        <span class="card-tag card-tag--active">Attivabile</span>
+                    </header>
+                    <p class="card-text">
+                        Se <strong>3 semi diversi</strong> si trovano nel tuo campo, ottieni <strong>10 punti</strong>.
+                    </p>
+                </li>
+
+            </ul>
+
+
 
             <div id="text-2" style="display: none;">
                 <p>
@@ -530,11 +693,11 @@
             <ul>
                 <li><strong>Coppe:</strong> Puoi <strong>aggiungere alla tua mano</strong> un Arcana Minore
                 dalla pila degli scarti <br></li>
-                <li><strong>Spade:</strong> Ottieni <strong>1 punto</strong> per ogni carta nella zona dei 
+                <li><strong>Spade:</strong> Ottieni <strong>2 punti</strong> per ogni carta nella zona dei 
                     punti vittoria dell'avversario con più carte in questa zona <br></li>
                 <li><strong>Bastoni:</strong> Ottieni <strong>1 punto</strong> per ogni Arcana Minore <strong>giocato</strong>
-                     dell'avversario<br></li>
-                <li><strong>Denari:</strong> Pesca <strong>1 Arcana Minore</strong> e posizionalo nel tuo campo</li>
+                     dal giocatore con più Arcana Minori giocati</li>
+                <li><strong>Denari:</strong> Rivela <strong>1 Arcana Minore</strong> e posizionalo nel tuo campo</li>
             </ul>
 
             <h4>Numeri</h4>
